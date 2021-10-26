@@ -1,0 +1,30 @@
+<div>
+  <!-- <strong for="psw"></strong> -->
+  <strong for="username"></strong>
+  <label for="username">Username:</label>
+  <input type="text" name="username" id="username" />
+  <span id="username_feedback" aria-live="polite"></span>
+</div>
+
+<script>
+  document.getElementById("username").addEventListener("keyup", function () {
+    function setError(el, msg) {
+      el.parentNode.querySelector("strong").innerHTML = "Error:";
+      el.parentNode.className = "error";
+      el.parentNode.querySelector("span").innerHTML = msg;
+    }
+    function setSuccess(el) {
+      el.parentNode.querySelector("strong").innerHTML = "OK:";
+      el.parentNode.className = "success";
+      el.parentNode.querySelector("span").innerHTML = "&check;";
+    }
+    var val = this.value;
+    if (val !== "") {
+      setSuccess(this, "&check; You can use this username.");
+    } else {
+      document.getElementById("username_feedback").innerHTML = "";
+      document.getElementById("username_feedback").parentNode.className = "";
+      document.querySelector('strong[for="username"]').innerHTML = "";
+    }
+  });
+</script>

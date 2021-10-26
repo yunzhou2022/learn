@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      // 很多不同层级的组件需要访问同样的数据，
+      // 如果只是嵌套比较深的层级中的一个组件需要访问数据，那么组合可能是一个更好的选择，将这个组件传递下去
+      class App extends React.Component {
+        render() {
+          return <Toolbar theme="dark" />;
+        }
+      }
+
+      function Toolbar(props) {
+        // Toolbar 组件接受一个额外的“theme”属性，然后传递给 ThemedButton 组件。
+        // 如果应用中每一个单独的按钮都需要知道 theme 的值，这会是件很麻烦的事，
+        // 因为必须将这个值层层传递所有组件。
+        return (
+          <div>
+            <ThemedButton theme={props.theme} />
+          </div>
+        );
+      }
+
+      class ThemedButton extends React.Component {
+        render() {
+          return <button theme={this.props.theme} />;
+        }
+      }
+
+      ReactDOM.render(<App />, document.getElementById("root"));
+    </script>
+  </body>
+</html>
