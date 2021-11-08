@@ -2,32 +2,16 @@
 
 看得见的进步
 
-## Today
+## HOOK
 
-高级指引
-
-- [x] 无障碍
-- [x] 代码分割
-- [x] Context
-- [x] 错误边界
-- [x] Refs 转发
-- [x] Fragments
-- [ ] 高阶组件
-- [ ] 与第三方库协同
-- [ ] 深入 JSX
-- [ ] 性能优化
-- [ ] Portals
-- [ ] Profiler
-- [ ] 不使用 ES6
-- [ ] 不使用 JSX
-- [ ] 协调
-- [ ] Refs & DOM
-- [ ] Render Props
-- [ ] 静态类型检查
-- [ ] 严格模式
-- [ ] 使用 PropTypes 类型检查
-- [ ] 非受控组件
-- [ ] Web Components
+1. Hook 简介
+2. Hook 概览
+3. 使用 State Hook
+4. 使用 Effect Hook
+5. Hook 规则
+6. 自定义 Hook
+7. Hook API 索引
+8. Hooks FAQ
 
 ## React
 
@@ -36,17 +20,12 @@
    - [x] 安装
    - [x] 核心概念
    - [x] 教程
-
-   - [ ] 高级指引
-
-   - [ ] API Reference
+   - [x] 高级指引
+   - [x] API Reference
 
    - [ ] HOOK
-
    - [ ] 测试
-
    - [ ] 贡献
-
    - [ ] FAQ
 
 2. 大致过一遍《深入 React 技术栈》
